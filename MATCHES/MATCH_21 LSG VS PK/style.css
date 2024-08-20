@@ -1,0 +1,163 @@
+
+
+*{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.table2 {
+    background: #DBE9FA;
+ 
+
+}
+.table1{
+    background: #f8f8ff;
+    color: black;
+}
+.table {
+    width: 100%;
+    height: 200px;
+    padding-top: 3px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shaow: 0px 5px 10px 1px rgba(0,0,0,0.15), 0px 5px 5px rgba(0, 0, 0, 0.18);
+}
+img {
+    width: 300px;
+    
+    margin: auto;
+}
+h1 {
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+p {
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.blue {
+    color: darkred;
+}
+body {
+    background-color: #e2e1e0;
+    background: #fff !important;
+    text-transform: capitalize;
+}
+.new2 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.head {
+    background: #DBE9FA;
+    
+    text-align: center;
+
+
+}
+
+h3 {
+    font-family: cursive;
+    text-align: center;
+
+    font-size: 15px;
+    
+}
+.teams {
+    display: flex;
+}
+progress {
+    display: block;
+    width: 300px;
+    padding: 4px;
+    transform: translateX(10px);
+    border: 0 none;
+    color: lightblue;
+    border-radius: 14px;
+}
+.cs1 {
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+.cs2 {
+    text-transform: capitalize;
+    margin-left: 200px;
+}
+.progress {
+    transform: translateY(-20px);
+}
+.squad {
+    text-align: left !important;
+    font-size: 15px !important;
+}
+.para {
+    font-size: 13px;
+}
+.side {
+    display: flex;
+    height: 50px !important;
+}
+a {
+    text-decoration: none;
+    margin-left: 20px;
+    text-align: center;
+}
+.new {
+    transform: translateX(50px);
+}
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #000;
+    transform: translateX(20px);
+    transition: width .3s;
+
+}
+a:hover::after {
+    width: 90%;
+
+}
+a:hover {
+    color: crimson;
+    border-radius: 2px;
+    border: 10px;
+}
+.para1 {
+    text-align: left;
+    background-color: #f8f8ff;
+    
+}
+.para3 {
+    transform: translateY(-5px);
+}
+.squad {
+    transform: translateY(-5px);
+}
+
+.hide {
+    display: none;
+}
+.tables {
+    text-align: center;
+}
+.tab {
+    
+    width: 100%
+    height: 100px;
+    padding-top: 3px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#img {
+    height: 250px;
+}
+#RSC {
+    transform: translateX(70%) !important;
+}

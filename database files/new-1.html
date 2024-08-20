@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <style type="text/css">
+   
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-transform: capitalize;
+      color: black;
+      font-family: sans-serif;
+      font-size: 30px;
+      letter-spacing: 2px;
+      font-weight: normal;
+      text-align: center;
+      color: #e600ac;
+      transform: translateY(30px);
+    }
+    form {
+     
+
+    }
+    input[type="text"] {
+      border: none;
+      border-bottom: 1px black;
+      outline: none;
+      height: 40px;
+      color: gray;
+      background: transparent;
+      font-size: 16px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+    button {
+      padding: 2px;
+      font-size: 20px;
+      text-transform: uppercase;
+      width: 60px;
+      text-align: center; 
+      height: 30px;
+      color: white;
+      background-color: black;
+    }
+
+    input {
+      caret-color: limegreen;
+    }
+
+    .login-box {
+     
+      width: 90%;
+      padding: 40px;
+     
+      /* background: rgba(0,0,0,.5); */
+      background: #393E46;
+      box-sizing: border-box;
+      transform: translateY(30px);
+      border-radius: 10px;
+      margin: auto;
+    }
+
+    .login-box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      text-transform: capitalize;
+      display: flex;
+      color: greenyellow;
+      text-align: center;
+    }
+    #team h2 {
+      padding: 0;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    #back {
+      display: flex;
+    }
+    h2:hover {
+      color: white;
+    }
+
+    .login-box .user-box {
+      position: relative;
+      transform: translateY(20px);
+    }
+
+    .login-box .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color:limegreen;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid limegreen;
+      outline: none;
+      background: transparent;
+    }
+
+    .login-box .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      padding: 10px 0;
+      font-size: 16px;
+      color: limegreen;
+      pointer-events: none;
+      transition: .5s;
+    }
+
+    .login-box .user-box input:focus~label,
+    .login-box .user-box input:valid~label {
+      top: -20px;
+      left: 0;
+      color: limegreen;
+      font-size: 12px;
+    }
+
+    .login-box form a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: limegreen;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 40px;
+      letter-spacing: 4px;
+    }
+
+    .login-box a:hover {
+      background: greenyellow;
+      color: black;
+      border-radius: 5px;
+    
+    }
+    .hide {
+      display: none;
+    }
+
+    p {
+      text-align: center;
+      color: limegreen;
+      top: 20px;
+    }
+    #team {
+      width: 100%;
+      height: 50%;
+      
+      text-align: center;
+      transform: translateY(20px);
+    }
+    h3 {
+      
+      font-size: 20px;
+      color: limegreen;
+      font-weight: bold;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      font-family: sans-serif;
+    }
+    table {
+      width: 100%;
+      margin: auto;
+      transform: translateY(20px);
+    }
+    
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+  <div id="team">
+  <h2>team & players info</h2>
+  </div>
+<div>
+
+  <div class="login-box"><div id="back">
+    <h2 id="pl">player comparison</h2>
+    <h2 id="tl">team comparison</h2></div>
+    <form id="new1">
+      <div class="user-box">
+        <input type="text" name="" required="" id="findID">
+        <label>Enter The Batsman/Bowler Name</label>
+      </div>
+      <a href="#" id="find">
+
+        Find
+      </a>
+
+      <br>
+      <table>
+        <tr>
+          <td><h3 id="findName" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="findstats" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="strike" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="wicket" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="hss" type="text"></h3></td>
+        </tr>
+      </table>
+    </form>
+    <form id="new2" class="hide">
+      <div class="user-box">
+        <input type="text" name="" required="" id="findteam">
+        <label>Enter The team names</label>
+      </div>
+      <a href="#" id="search">
+
+        Search
+      </a>
+
+      <table>
+        <tr>
+          <td><h3 id="teamName" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="matches" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="won" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="lost" type="text"></h3></td>
+        </tr>
+        <tr>
+          <td><h3 id="lowest_score" type="text"></h3></td>
+        </tr>
+         <tr>
+          <td><h3 id="highest_score" type="text"></h3></td>
+        </tr>
+      </table>
+    </form>
+    </div>
+
+
+    <!--div id="names">
+      <h3 id="findName" type="text"></h3>
+      <h3 id="findstats" type="number"></h3> 
+      <h3 id="strike" type="text"></h3>
+      <h3 id="wicket" type="number"></h3> 
+      <h3 id="hss" type="text"></h3></div-->
+
+   
+ 
+
+<!--div id="findDetails">
+        <h1>Find by ID</h1>
+        <h4>ID</h4>
+        <input id="findID" type="text"> <br><br>
+        <button id="find">FIND</button>
+        <h3 id="findName" type="text"></h3>
+        <h3 id="findAge" type="number"></h3> <br><br>
+    </div-->
+
+
+<script type="module">
+
+
+
+
+var name = document.querySelector("#name");
+        var stats = document.querySelector("#stats");
+        var strikerate = document.querySelector("#strikerate");
+        var wickets = document.querySelector("#wickets");
+        var hs = document.querySelector("#hs");
+        var findTeam = document.querySelector("#findteam")
+
+    var new1 = document.getElementById("new1");
+    var new2 = document.getElementById("new2");
+    var pl = document.getElementById("pl");
+    var tl = document.getElementById("tl");
+    pl.addEventListener("click", () => {
+      new2.classList.add("hide");
+      new1.classList.remove("hide");
+    })
+     tl.addEventListener("click", () => {
+      new2.classList.remove("hide");
+      new1.classList.add("hide");
+    })
+
+     // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBLZdD_RmN9PpE6aT6w1brD2YwWLYlWbkw",
+    authDomain: "sabari-73879.firebaseapp.com",
+    databaseURL: "https://sabari-73879-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "sabari-73879",
+    storageBucket: "sabari-73879.appspot.com",
+    messagingSenderId: "408677850622",
+    appId: "1:408677850622:web:8b19ecba75b0006d2234af"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig) 
+  import {getDatabase, ref, get, set, child, update, remove}
+        from  "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+
+   
+
+        
+
+        const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+        var enterAge = document.querySelector("#enterAge");
+        var findID = document.querySelector("#findID");
+        var findName = document.querySelector("#findName");
+        var findAge = document.querySelector("#findstats");
+        var wickets = document.querySelector("#wickets");
+        var hs = document.querySelector("#hs");
+        var wicket = document.querySelector("#wicket");
+        var hss = document.querySelector("#hss");
+        var strike = document.querySelector("#strike");
+      
+        var teamName = document.querySelector("#teamName");
+        var matches = document.querySelector("#matches");
+        var won = document.querySelector("#won");
+        var lost = document.querySelector("#lost");
+        var lowest_score = document.querySelector("#lowest_score");
+        var highest_score = document.querySelector("#highest_score");
+
+     
+        var findBtn = document.querySelector("#find");
+        var search = document.querySelector("#search");
+
+        
+
+        function FindData() {
+            const dbref = ref(db);
+
+            get(child(dbref, "People/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().players_name;
+                    findstats.innerHTML = "stats: " + snapshot.val().stats;
+                    strike.innerHTML = "strike_rate: " + snapshot.val().strike_rate;
+                    wicket.innerHTML = "wickets: " + snapshot.val().wickets;
+                    hss.innerHTML = "Highest score: " + snapshot.val().hs;
+
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error);
+            })
+            
+        }
+
+
+        function FindData2() {
+            const dbref = ref(db);
+
+            get(child(dbref, "People/" + findteam.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    teamName.innerHTML = "teams: " + snapshot.val().teames;
+                    matches.innerHTML = "matches: " + snapshot.val().matches;
+                    won.innerHTML = "won: " + snapshot.val().won;
+                    lost.innerHTML = "lost: " + snapshot.val().lost;
+                    lowest_score.innerHTML = "lowest score: " + snapshot.val().lowest_score;
+                    highest_score.innerHTML = "Highest score: " + snapshot.val().higest_score;
+
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error);
+            })
+            
+        }
+
+       
+        findBtn.addEventListener('click', FindData);
+        search.addEventListener('click', FindData2);
+
+ 
+</script>
+</body>
+</html>
